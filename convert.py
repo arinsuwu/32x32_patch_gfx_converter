@@ -34,7 +34,7 @@ if __name__ == "__main__":
                         new_frame.close()
                     exit(0)
 
-                with open(f"{out_dir}/{hex(frame)[2:].rjust(2, '0').upper()}.bin", "ab") as new_frame:
+                with open(f"{out_dir}/{frame:02X}.bin", "ab") as new_frame:
                     new_frame.write(frame_data+PAD_X_LINES[i]*3)
 
             frame += 1
